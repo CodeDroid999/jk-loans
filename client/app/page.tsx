@@ -1,8 +1,8 @@
 import AllLoans from "@/components/Dashboard/All-loans";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Loan Management System",
-  description: "This is the Loan Management System built using Next.js",
+  title: "JK Loan Services",
+  description: "Secure your emergency & business loans at 20% interest",
   // other metadata
 };
 

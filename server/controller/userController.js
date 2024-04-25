@@ -2,6 +2,10 @@ const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
+// Define the JWT secret key as a constant
+const SECRET_KEY =
+  "7a84c2f3e356d8a1901e2f64b8b07ebfb3e144d6e48fd7ae1c6420c6a0fe9129";
+
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -18,7 +22,7 @@ exports.login = async (req, res) => {
       return res.status(401).json({ error: "Invalid username or password" });
     }
 
-    const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, {
+    const token = jwt.sign({ userId: user._id }, SECRET_KEY, {
       expiresIn: "30d",
     });
 
