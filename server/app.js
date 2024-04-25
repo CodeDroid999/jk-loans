@@ -13,7 +13,7 @@ app.use("/api/loans", loanRoutes);
 app.get("/", (req, res) => res.send(""));
 
 mongoose
-  .connect(process.env.MONGODB_SERVER_PORT, {
+  .connect("mongodb+srv://airtaska:ZPMemx7R0JX11QV7@jkloans.l5l3cst.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
